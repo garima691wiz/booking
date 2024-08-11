@@ -21,7 +21,20 @@ if (!mongodbURI) {
 app.use(cors());
 app.use(express.json());
 app.use('/bookings', bookingRouter);
+app.get('/jsonfile', (req, res) => {
+    const filePath = path.join(__dirname, 'data.json'); // Adjust path as necessary
 
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            res.status(500).json({ message: 'Error reading file' });
+            return;
+        }
+
+        res.setHeader('Content-Type', 'application/json');
+        res.send(data);
+    });
+});
 // Connect to MongoDB and start the server
 mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
