@@ -23,19 +23,11 @@ app.use(express.json());
 app.use('/bookings', bookingRouter);
 
 // Connect to MongoDB and start the server
-mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        app.listen(PORT, () => {
-            console.log(`Connected to MongoDB database and server is running on port: ${PORT}`);
-        });
-    })
-    .catch((err) => {
-        console.error('Failed to connect to MongoDB:', err.message);
-        process.exit(1); // Exit process with failure code
-    });
+mongoose.connect(mongodbURI)
+    .then(() =>
+        app.listen(PORT, () =>
+            console.log(`Connected to mongodb database and server is running on port: ${PORT}`)
+        )
 
-// Error handling middleware
-app.use((err, req, res, next) => {
-    console.error('Server error:', err.stack);
-    res.status(500).json({ message: 'Internal Server Error' });
-});
+    ).catch((err) => console.log(err))
+
