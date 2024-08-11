@@ -33,6 +33,9 @@ mongoose.connect(mongodbURI, { useNewUrlParser: true, useUnifiedTopology: true }
         console.error('Failed to connect to MongoDB:', err.message);
         process.exit(1); // Exit process with failure code
     });
+app.get('/', (req, res) => {
+  res.send('Welcome to the backend!');
+});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
