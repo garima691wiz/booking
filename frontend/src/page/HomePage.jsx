@@ -79,7 +79,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen  flex flex-col gap-4 px-8 py-6 border-2 rounded-md shadow-lg bg-gradient-to-r from-gray-900 to-gray-700">
+    <div className="min-h-screen  flex flex-col gap-5 px-8 py-6 border-2 rounded-md shadow-lg bg-gradient-to-r from-gray-900 to-gray-700">
        {/* Modal component to show error messages */}
       <Modal
         isVisible={showModal}
