@@ -7,7 +7,7 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-axios.defaults.baseURL = "https://moviebooking-u3dt.onrender.com";
+axios.defaults.baseURL = "http://localhost:8080";
 root.render(
   <React.StrictMode>
     <Provider store={store}>
