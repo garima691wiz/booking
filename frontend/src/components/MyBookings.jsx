@@ -17,8 +17,8 @@ const MyBookings = () => {
 
   return (
     <div className=" flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-500">
-      <div className="bg-white p-4 rounded-lg shadow-lg max-w-sm w-72 h-full">
-        <h1 className="text-3xl font-bold text-center text-indigo-700 mb-2 underline">
+      <div className="bg-white p-5 rounded-lg shadow-lg max-w-sm w-72 h-full">
+        <h1 className="text-3xl font-bold text-center text-indigo-700 mb-3 underline">
           My Bookings
         </h1>
         {bookingDetails.movie ? (
