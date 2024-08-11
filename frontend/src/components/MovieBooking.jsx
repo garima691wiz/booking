@@ -18,7 +18,7 @@ const MovieBooking = ({ movieToHome }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 border-2  rounded-md p-4" style={{ width: '600px', height: '240px' }}>
+    <div className="flex flex-col gap-4 border-2  rounded-md p-4" >
       <div className="flex gap-6 items-center">
       <BiCameraMovie className="text-3xl text-white" />
       <h1 className="flex font-serif font-bold text-xl  underline text-white">Movies</h1>
