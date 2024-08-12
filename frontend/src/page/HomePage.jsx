@@ -87,9 +87,11 @@ const HomePage = () => {
         errormsg={errorMsg}
       />
         {/* Layout for MovieBooking and MyBookings components */}
-      <div className="flex flex-wrap-reverse gap-4 justify-between items-center">
-        <MovieBooking movieToHome={movieData} />
-        <MyBookings />
+        <div className="flex flex-wrap-reverse lg:flex-nowrap gap-4 justify-between items-center">
+      <MovieBooking movieToHome={movieData} />
+      <MyBookings />
+
+
       </div>
 
        {/* Layout for TimeBooking and SeatBooking components */}
